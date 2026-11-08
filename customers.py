@@ -2,6 +2,21 @@
 #Author: Keerthana Pallela
 #Module 11 Lab: Customer Dictionary & Lookup
 
+# Reflection Questions 
+
+# 1. In Exercise 3, I looked up the email key I had deleted in two different ways and got different results. 
+# When I used customer.get("email", "no email on file"), it returned the default text and the program kept running.
+# However, when I used customer["email"], it gave me a KeyError because the key was missing. 
+# The program would have crashed if I had not used try/except to catch the error.
+# In real work, I would use bracket notation when a key is required for the program to work correctly. 
+# For example, in a billing system, if an invoice is missing its total, I would want the program to show an error instead of treating it as $0. 
+# This helps identify the problem right away. I would use .get() when a key is optional and it is normal for it to be missing, such as an email address or phone number on a customer record. 
+# The final conclusion is that if a missing key means something is wrong, I use brackets, but if it is normal for a key to be missing, I use .get() with a default value.
+
+# 2. Exercise 8 reminded me of an Excel PivotTable or the SUMIF function because a PivotTable organizes data into groups and shows a total for each group. 
+# SUMIF is an Excel function that adds numbers together only when they meet a specific condition. In my code, the loop goes through each transaction one at a time and uses .get(region, 0) to find the total for that region. 
+# If it is the first time that region appears, it starts at 0 and then adds the new amount. The dictionary keys work like the row labels in a PivotTable, and the values represent the total for each region.
+
 print("---Exercise 1---")
 # One customer stored as a dictionary of key: value pairs
 customer = {
